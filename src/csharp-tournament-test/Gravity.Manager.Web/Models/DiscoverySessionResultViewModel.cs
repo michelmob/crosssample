@@ -4,7 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using Gravity.Manager.Data;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.Domain.Aws;
+using Gravity.Manager.Domain.ValueObjects;
 using Newtonsoft.Json.Linq;
 
 namespace Gravity.Manager.Web.Models

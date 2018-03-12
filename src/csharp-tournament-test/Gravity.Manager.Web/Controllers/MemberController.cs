@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Gravity.Diagnostics;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Service;
 using Gravity.Manager.Web.Application;
 using Gravity.Manager.Web.Models;
@@ -15,7 +16,7 @@ namespace Gravity.Manager.Web.Controllers
         private readonly ILogger _logger;
         private readonly ISigninManager _signinManager;
         private readonly IExternalAuthenticationProvider _externalAuthenticationProvider;
-        private readonly IMemberService _memberService;
+        private readonly IMemberAppService _memberService;
         private readonly IUserStateWrapper _userStateWrapper;
 
         public const string InvalidLogonMessage = "Invalid user name or password.";
@@ -26,7 +27,7 @@ namespace Gravity.Manager.Web.Controllers
         public MemberController(ILogger logger
             , ISigninManager signinManager
             , IExternalAuthenticationProvider externalAuthenticationProvider
-            , IMemberService memberService
+            , IMemberAppService memberService
             , IUserStateWrapper userStateWrapper
             )
         {

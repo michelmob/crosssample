@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Service;
 using Gravity.Manager.Web.Models;
 using Gravity.Manager.Web.Models.DiscoveryReport;
@@ -13,9 +14,9 @@ namespace Gravity.Manager.Web.Controllers
     [Route("discovery-reports")]
     public class DiscoveryReportController : Controller
     {
-        private readonly IDiscoveryService _service;
+        private readonly IDiscoveryAppService _service;
 
-        public DiscoveryReportController(IDiscoveryService service)
+        public DiscoveryReportController(IDiscoveryAppService service)
         {
             _service = service ?? throw new ArgumentNullException(nameof(service));
         }

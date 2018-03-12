@@ -1,5 +1,6 @@
 ﻿using System;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.ApplicationService;
+using Gravity.Manager.Domain.Organizations;
 using Gravity.Manager.Service;
 
 namespace Gravity.Manager.Web.Application

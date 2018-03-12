@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Gravity.Manager.Data.EF.Repositories;
-using Gravity.Manager.Data.Entities;
-using Gravity.Manager.Data.Repositories;
+using Gravity.Manager.Domain;
+using Gravity.Manager.Domain.Audits;
+using Gravity.Manager.Domain.Aws;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gravity.Manager.Data.EF
@@ -45,7 +46,7 @@ namespace Gravity.Manager.Data.EF
                 var newAcc = new AwsAccount{Name = name};
                 
                 await AwsAccounts.InsertAsync(newAcc);
-
+                
                 return newAcc;
             }
         }

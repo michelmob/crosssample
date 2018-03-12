@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Gravity.Diagnostics;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Service;
 using Gravity.Manager.Web.Application;
 using Gravity.Manager.Web.Models;
@@ -12,10 +13,10 @@ namespace Gravity.Manager.Web.Controllers.API
     [Route("api/discovery")]
     public class DiscoveryController : Controller
     {
-        private readonly IDiscoveryService _discoveryService;
+        private readonly IDiscoveryAppService _discoveryService;
         private readonly ILogger _logger;
 
-        public DiscoveryController(IDiscoveryService discoveryService, ILogger logger)
+        public DiscoveryController(IDiscoveryAppService discoveryService, ILogger logger)
         {
             _discoveryService = discoveryService ?? throw new ArgumentNullException(nameof(discoveryService));
             _logger = (logger ?? throw new ArgumentNullException(nameof(logger))).GetLogger(typeof(DiscoveryController));

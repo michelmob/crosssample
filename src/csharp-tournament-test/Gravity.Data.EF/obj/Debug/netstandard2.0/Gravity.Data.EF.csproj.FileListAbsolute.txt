@@ -20,3 +20,14 @@
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.AssemblyInfo.cs
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.dll
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\bin\Debug\netstandard2.0\Gravity.Data.EF.deps.json
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\bin\Debug\netstandard2.0\Gravity.Data.EF.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\bin\Debug\netstandard2.0\Gravity.Data.EF.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\bin\Debug\netstandard2.0\Gravity.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\bin\Debug\netstandard2.0\Gravity.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.csprojResolveAssemblyReference.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.csproj.CoreCompileInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.AssemblyInfoInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.AssemblyInfo.cs
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.EF\obj\Debug\netstandard2.0\Gravity.Data.EF.pdb

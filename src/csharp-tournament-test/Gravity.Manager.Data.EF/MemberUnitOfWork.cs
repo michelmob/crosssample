@@ -1,5 +1,6 @@
 ﻿using System;
-using Gravity.Manager.Data.Repositories;
+using Gravity.Manager.Domain;
+using Gravity.Manager.Domain.Organizations;
 
 namespace Gravity.Manager.Data.EF
 {

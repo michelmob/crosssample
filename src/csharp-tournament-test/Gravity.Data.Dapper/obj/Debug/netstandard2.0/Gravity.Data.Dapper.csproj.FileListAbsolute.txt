@@ -20,3 +20,14 @@
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.AssemblyInfo.cs
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.dll
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\bin\Debug\netstandard2.0\Gravity.Data.Dapper.deps.json
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\bin\Debug\netstandard2.0\Gravity.Data.Dapper.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\bin\Debug\netstandard2.0\Gravity.Data.Dapper.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\bin\Debug\netstandard2.0\Gravity.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\bin\Debug\netstandard2.0\Gravity.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.csproj.CoreCompileInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.AssemblyInfoInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.AssemblyInfo.cs
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Data.Dapper\obj\Debug\netstandard2.0\Gravity.Data.Dapper.csprojResolveAssemblyReference.cache

@@ -2,7 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.ApplicationService;
+using Gravity.Manager.Domain.Organizations;
 using Gravity.Manager.Service;
 using Gravity.Manager.Service.Ldap;
 using Gravity.Manager.Web.Application;
@@ -20,7 +21,7 @@ namespace Gravity.Manager.Web.Tests.Controllers
         private TestLogger _testLogger;
         private Mock<ISigninManager> _signinManagerMock;
         private Mock<IExternalAuthenticationProvider> _ldapAuthenticationProviderMock;
-        private Mock<IMemberService> _memberServiceMock;
+        private Mock<IMemberAppService> _memberServiceMock;
         private Mock<IUserStateWrapper> _userStateWrapperNullMock;
         private Mock<IUserStateWrapper> _userStateWrapperMock;
         private Mock<IUserStateWrapper> _userStateWrapperNotRegisteredMock;
@@ -39,7 +40,7 @@ namespace Gravity.Manager.Web.Tests.Controllers
             _ldapAuthenticationProviderMock.Setup(m => m.Authenticate(It.Is<string>(s => s == "admin2"), It.IsAny<string>())).Returns(true);
             _ldapAuthenticationProviderMock.Setup(m => m.Authenticate(It.Is<string>(s => s == "admin3"), It.IsAny<string>())).Returns(true);
             _ldapAuthenticationProviderMock.Setup(m => m.Authenticate(It.Is<string>(s => s == "user"), It.IsAny<string>())).Returns(false);
-            _memberServiceMock = new Mock<IMemberService>();
+            _memberServiceMock = new Mock<IMemberAppService>();
             // Registered user
             _memberServiceMock.Setup(m => m.GetUserByUsernameAsync("admin")).ReturnsAsync(new User()
             {

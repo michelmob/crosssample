@@ -1,0 +1,16 @@
+[2018-03-11 22:35:42.1063][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Hosting.Internal.WebHost] Request starting HTTP/1.1 GET http://localhost:2065/   
+[2018-03-11 22:35:42.2117][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Hosting.Internal.WebHost] Request starting HTTP/1.1 GET http://localhost:2065/   
+[2018-03-11 22:35:42.7177][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Authorization.DefaultAuthorizationService] Authorization failed for user: (null). 
+[2018-03-11 22:35:42.7235][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Authorization.DefaultAuthorizationService] Authorization failed for user: (null). 
+[2018-03-11 22:35:42.7235][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2018-03-11 22:35:42.7235][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+[2018-03-11 22:35:42.7434][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Mvc.ChallengeResult] Executing ChallengeResult with authentication schemes (). 
+[2018-03-11 22:35:42.7434][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Mvc.ChallengeResult] Executing ChallengeResult with authentication schemes (). 
+[2018-03-11 22:35:42.7861][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler] AuthenticationScheme: Cookies was challenged. 
+[2018-03-11 22:35:42.7861][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler] AuthenticationScheme: Cookies was challenged. 
+[2018-03-11 22:35:42.8033][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker] Executed action Gravity.Manager.Web.Controllers.HomeController.Index (Gravity.Manager.Web) in 94.1004ms 
+[2018-03-11 22:35:42.8033][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker] Executed action Gravity.Manager.Web.Controllers.HomeController.Index (Gravity.Manager.Web) in 94.1004ms 
+[2018-03-11 22:35:42.8345][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Hosting.Internal.WebHost] Request finished in 732.5346ms 302  
+[2018-03-11 22:35:42.8345][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Hosting.Internal.WebHost] Request finished in 732.5346ms 302  
+[2018-03-11 22:35:42.9009][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Hosting.Internal.WebHost] Request starting HTTP/1.1 GET http://localhost:2065/member/logon?ReturnUrl=%2F   
+[2018-03-11 22:35:42.9009][MICHELBORGEDF13][Info][Microsoft.AspNetCore.Hosting.Internal.WebHost] Request starting HTTP/1.1 GET http://localhost:2065/member/logon?ReturnUrl=%2F   

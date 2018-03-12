@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,9 @@ namespace Gravity.Manager.Web.Controllers
     {
         private const int PageSize = 10;
         
-        private readonly IAuditService _service;
+        private readonly IAuditAppService _service;
 
-        public AuditController(IAuditService service)
+        public AuditController(IAuditAppService service)
         {
             _service = service ?? throw new ArgumentNullException(nameof(service));
         }

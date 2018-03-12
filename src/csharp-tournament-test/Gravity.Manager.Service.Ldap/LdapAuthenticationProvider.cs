@@ -1,5 +1,6 @@
 ﻿using System;
 using Gravity.Diagnostics;
+using Gravity.Manager.ApplicationService;
 using Microsoft.Extensions.Options;
 using Novell.Directory.Ldap;
 

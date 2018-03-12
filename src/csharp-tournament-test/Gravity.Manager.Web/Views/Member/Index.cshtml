@@ -1,4 +1,4 @@
-﻿@using Gravity.Manager.Data.Entities
+﻿@using Gravity.Manager.Domain.Organizations
 @model Gravity.Manager.Web.Models.UserProfileViewModel
 @{
     ViewData["Title"] = "Member";
@@ -8,7 +8,7 @@
     <div class="col-md-4">
         <div class="panel panel-default">
             <div class="panel-body">
-                @using (Html.BeginForm("Index", "Member", FormMethod.Post))
+                @using (Html.BeginForm("Update", "Member", FormMethod.Post))
                 {
                     @Html.AntiForgeryToken()
                     <div class="form-inline">

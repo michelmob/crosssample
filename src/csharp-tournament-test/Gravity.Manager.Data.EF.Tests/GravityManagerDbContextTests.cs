@@ -1,5 +1,7 @@
 using System.Linq;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.Domain;
+using Gravity.Manager.Domain.Audits;
+using Gravity.Manager.Domain.Aws;
 using Gravity.Runtime.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -15,6 +17,7 @@ namespace Gravity.Manager.Data.EF.Tests
             var (audits, dm) = GetUnitsOfWork();
 
             var acc = new AwsAccount {Name = "foo"};
+
             dm.AwsAccounts.Insert(acc, true);
 
             var audit = audits.Audit.GetAll().Last();
@@ -71,18 +74,26 @@ namespace Gravity.Manager.Data.EF.Tests
         [Test]
         public void AuditRepository_GetPage_PaginatesData()
         {
-            const int count = 10;  // count of audits, there are two by default for user and org.
+            const int count = 10;  
+            // count of audits, there are two by default for user and org.
 
-            var (audits, dm) = GetUnitsOfWork();
-
+            var (auditsUow, dmUow) = GetUnitsOfWork();
+            
+            var auditRepository     = auditsUow.Audit;
+            var awsAccountRepository = dmUow.AwsAccounts;
+            
             for (var i = 0; i < count - 2; i++)
             {
-                dm.AwsAccounts.Insert(new AwsAccount {Name = i.ToString()}, true);
+                awsAccountRepository.Insert(new AwsAccount {Name = i.ToString()}, true);
             }
-            
-            Assert.AreEqual(count, audits.Audit.GetAll().Count());
 
-            var page = audits.Audit.GetPageAsync<object, object>(0, 3).Result;
+            awsAccountRepository.Commit();
+
+            var audits = auditRepository.GetAll();
+            
+            Assert.AreEqual(count, audits.Count());
+
+            var page = auditRepository.GetPageAsync<object, object>(0, 3).Result;
             Assert.AreEqual(count, page.Count);
             Assert.AreEqual(3, page.PageSize);
             Assert.AreEqual(3, page.Data.Count);
@@ -91,7 +102,7 @@ namespace Gravity.Manager.Data.EF.Tests
             Assert.IsFalse(page.HasPrevious);
             Assert.IsTrue(page.HasNext);
 
-            page = audits.Audit.GetPageAsync<object, object>(3, 3).Result;
+            page = auditRepository.GetPageAsync<object, object>(3, 3).Result;
             Assert.AreEqual(count, page.Count);
             Assert.AreEqual(1, page.Data.Count);
             Assert.AreEqual(3, page.PageSize);
@@ -123,8 +134,9 @@ namespace Gravity.Manager.Data.EF.Tests
                 new FixedDateTimeProvider());
 
             dbContext.Users.Add(userProvider.GetOperatingUser());
-            dbContext.SaveChanges();
             
+            dbContext.SaveChanges();
+
             return dbContext;
         }
     }

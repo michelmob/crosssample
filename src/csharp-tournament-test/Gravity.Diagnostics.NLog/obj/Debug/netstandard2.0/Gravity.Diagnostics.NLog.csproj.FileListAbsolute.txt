@@ -20,3 +20,14 @@
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.AssemblyInfo.cs
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.dll
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\bin\Debug\netstandard2.0\Gravity.Diagnostics.NLog.deps.json
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\bin\Debug\netstandard2.0\Gravity.Diagnostics.NLog.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\bin\Debug\netstandard2.0\Gravity.Diagnostics.NLog.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\bin\Debug\netstandard2.0\Gravity.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\bin\Debug\netstandard2.0\Gravity.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.csproj.CoreCompileInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.AssemblyInfoInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.AssemblyInfo.cs
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.csprojResolveAssemblyReference.cache

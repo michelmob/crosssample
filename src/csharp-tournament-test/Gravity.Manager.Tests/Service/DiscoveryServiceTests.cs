@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Data;
 using Gravity.Manager.Data.EF;
 using Gravity.Manager.Data.EF.Tests;
-using Gravity.Manager.Data.Entities;
-using Gravity.Manager.Service;
+using Gravity.Manager.Domain.Aws;
+using Gravity.Manager.Domain.ValueObjects;
 using NUnit.Framework;
 
 namespace Gravity.Manager.Tests.Service
@@ -38,7 +39,11 @@ namespace Gravity.Manager.Tests.Service
         [Test]
         public void Service_GetDependencyMatrixForMissingSession_ReturnsNull()
         {
-            var res = GetService().GetDiscoveryReportAsync(-1).Result;
+            var service = GetService();
+
+            Assert.IsNotNull(service);
+            
+            var res = service.GetDiscoveryReportAsync(-1).Result;
 
             Assert.IsNull(res);
         }
@@ -268,12 +273,12 @@ namespace Gravity.Manager.Tests.Service
             };
         }
 
-        public static IDiscoveryService GetService()
+        public static IDiscoveryAppService GetService()
         {
             var dbContext = GravityManagerDbContextTests.GetTestDbContext();
 
             var ctx = new DiscoveryUnitOfWork(dbContext);
-            return new DiscoveryService(ctx, new FixedDateTimeProvider());
+            return new DiscoveryAppService(ctx, new FixedDateTimeProvider());
         }
     }
 }

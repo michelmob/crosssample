@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.Domain.Aws;
 
 namespace Gravity.Manager.Web.Models.DiscoveryReport
 {

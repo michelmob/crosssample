@@ -23,7 +23,10 @@ namespace Gravity.Data.EF
             Context = context;
             Set = context.Set<TEntity>();
 
-            // Context.Configuration.AutoDetectChangesEnabled = !disableChangeTracking;
+            Context.ChangeTracker.AutoDetectChangesEnabled = true;
+       
+             //Context.Configuration.AutoDetectChangesEnabled = !disableChangeTracking;
+
             // Context.Configuration.LazyLoadingEnabled = !disableLazyLoading;
             // Context.Configuration.ProxyCreationEnabled = !disableProxyCreation;
             // Context.Configuration.UseDatabaseNullSemantics = !useDatabaseNullSemantics;
@@ -47,10 +50,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> InsertAsync(TEntity entity)
+        public async  Task<int> InsertAsync(TEntity entity)
         {
             Insert(entity);
-            return CommitAsync();
+            return await CommitAsync();
         }
 
         public void Update(TEntity entity, bool commitAfter = false)
@@ -59,10 +62,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> UpdateAsync(TEntity entity)
+        public async Task<int> UpdateAsync(TEntity entity)
         {
             Update(entity);
-            return CommitAsync();
+            return await CommitAsync();
         }
 
         public void Delete(TId id, bool commitAfter = false) 
@@ -72,10 +75,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> DeleteAsync(TId id)
+        public async Task<int> DeleteAsync(TId id)
         {
             Delete(id);
-            return CommitAsync();
+            return await CommitAsync();
         }
 
         public void Delete(TEntity entity, bool commitAfter = false)
@@ -88,10 +91,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> DeleteAsync(TEntity entity)
+        public async Task<int> DeleteAsync(TEntity entity)
         {
             Delete(entity);
-            return CommitAsync();
+            return await CommitAsync();
         }
 
         public void BulkInsert(IEnumerable<TEntity> entities, bool commitAfter = false)
@@ -100,10 +103,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> BulkInsertAsync(IEnumerable<TEntity> entities)
+        public async Task<int> BulkInsertAsync(IEnumerable<TEntity> entities)
         {
             BulkInsert(entities);
-            return CommitAsync();
+            return await CommitAsync();
         }
         
         public void BulkUpdate(IEnumerable<TEntity> entities, bool commitAfter = false)
@@ -121,10 +124,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> BulkUpdateAsync(IEnumerable<TEntity> entities)
+        public async Task<int> BulkUpdateAsync(IEnumerable<TEntity> entities)
         {
             BulkUpdate(entities);
-            return CommitAsync();
+            return await CommitAsync();
         }
 
         public void BulkDelete(IEnumerable<object> ids, bool commitAfter = false)
@@ -138,10 +141,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> BulkDeleteAsync(IEnumerable<object> ids)
+        public async Task<int> BulkDeleteAsync(IEnumerable<object> ids)
         {
             BulkDelete(ids);
-            return CommitAsync();
+            return await CommitAsync();
         }
 
         public void BulkDelete(IEnumerable<TEntity> entities, bool commitAfter = false)
@@ -157,10 +160,10 @@ namespace Gravity.Data.EF
             if (commitAfter) Commit();
         }
 
-        public Task<int> BulkDeleteAsync(IEnumerable<TEntity> entities)
+        public async Task<int> BulkDeleteAsync(IEnumerable<TEntity> entities)
         {
             BulkDelete(entities);
-            return CommitAsync();
+            return await CommitAsync();
         }
 
         public TEntity GetLocalExistingEntity(TEntity entity)
@@ -209,9 +212,9 @@ namespace Gravity.Data.EF
             return Set.Where(match).ToList();
         }
 
-        public Task<List<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> match)
+        public async Task<List<TEntity>> FindAllAsync(Expression<Func<TEntity, bool>> match)
         {
-            return Set.Where(match).ToListAsync();
+            return await Set.Where(match).ToListAsync();
         }
         
         public async Task<DataPage<TEntity>> GetPageAsync<TInclude, TOrderBy>(int pageIndex, int pageSize,

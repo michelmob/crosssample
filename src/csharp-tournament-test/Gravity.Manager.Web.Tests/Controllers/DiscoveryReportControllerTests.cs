@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Data.EF.Tests;
 using Gravity.Manager.Service;
 using Gravity.Manager.Tests.Service;
@@ -13,7 +14,7 @@ namespace Gravity.Manager.Web.Tests.Controllers
 {
     public class DiscoveryReportControllerTests
     {
-        private IDiscoveryService _service;
+        private IDiscoveryAppService _service;
         private DiscoveryReportController _controller;
 
         [SetUp]

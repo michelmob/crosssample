@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Gravity.Diagnostics;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Service;
 using Gravity.Manager.Web.Application;
 using Gravity.Manager.Web.Models;
@@ -17,11 +17,11 @@ namespace Gravity.Manager.Web.Controllers
     public class MembersController : BaseMvcController
     {
         private readonly ILogger _logger;
-        private readonly IMemberService _memberService;
+        private readonly IMemberAppService _memberService;
         private readonly IUserStateWrapper _userStateWrapper;
 
         public MembersController(ILogger logger
-            , IMemberService memberService
+            , IMemberAppService memberService
             , IUserStateWrapper userStateWrapper
             )
         {

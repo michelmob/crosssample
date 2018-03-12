@@ -1,6 +1,6 @@
 ﻿using Gravity.Data.EF;
-using Gravity.Manager.Data.Entities;
-using Gravity.Manager.Data.Repositories;
+using Gravity.Manager.Domain.Audits;
+using Gravity.Manager.Domain.Dependencies;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gravity.Manager.Data.EF.Repositories

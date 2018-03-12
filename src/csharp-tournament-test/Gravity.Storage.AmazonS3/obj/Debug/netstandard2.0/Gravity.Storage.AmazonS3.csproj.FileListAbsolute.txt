@@ -20,3 +20,14 @@
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.AssemblyInfo.cs
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.dll
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.Storage.AmazonS3.deps.json
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.Storage.AmazonS3.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.Storage.AmazonS3.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.csprojResolveAssemblyReference.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.csproj.CoreCompileInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.AssemblyInfoInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.AssemblyInfo.cs
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.pdb

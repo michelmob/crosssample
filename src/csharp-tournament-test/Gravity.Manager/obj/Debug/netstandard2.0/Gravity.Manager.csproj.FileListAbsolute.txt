@@ -19,3 +19,14 @@
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.AssemblyInfo.cs
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.dll
 \\Mac\Home\Dropbox\Public\Crossover\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.Manager.deps.json
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.Manager.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.Manager.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.csproj.CoreCompileInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.AssemblyInfoInputs.cache
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.AssemblyInfo.cs
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.dll
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.csprojResolveAssemblyReference.cache

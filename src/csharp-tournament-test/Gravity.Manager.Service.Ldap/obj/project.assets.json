@@ -5727,11 +5727,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "\\\\Mac\\Home\\Dropbox\\Public\\Crossover\\csharp-tournament-test\\Gravity.Manager.Service.Ldap\\Gravity.Manager.Service.Ldap.csproj",
+      "projectUniqueName": "X:\\Projects\\crosssample\\src\\csharp-tournament-test\\Gravity.Manager.Service.Ldap\\Gravity.Manager.Service.Ldap.csproj",
       "projectName": "Gravity.Manager.Service.Ldap",
-      "projectPath": "\\\\Mac\\Home\\Dropbox\\Public\\Crossover\\csharp-tournament-test\\Gravity.Manager.Service.Ldap\\Gravity.Manager.Service.Ldap.csproj",
+      "projectPath": "X:\\Projects\\crosssample\\src\\csharp-tournament-test\\Gravity.Manager.Service.Ldap\\Gravity.Manager.Service.Ldap.csproj",
       "packagesPath": "C:\\Users\\michelborges\\.nuget\\packages\\",
-      "outputPath": "\\\\Mac\\Home\\Dropbox\\Public\\Crossover\\csharp-tournament-test\\Gravity.Manager.Service.Ldap\\obj\\",
+      "outputPath": "X:\\Projects\\crosssample\\src\\csharp-tournament-test\\Gravity.Manager.Service.Ldap\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -5753,8 +5753,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "\\\\Mac\\Home\\Dropbox\\Public\\Crossover\\csharp-tournament-test\\Gravity.Manager\\Gravity.Manager.csproj": {
-              "projectPath": "\\\\Mac\\Home\\Dropbox\\Public\\Crossover\\csharp-tournament-test\\Gravity.Manager\\Gravity.Manager.csproj"
+            "X:\\Projects\\crosssample\\src\\csharp-tournament-test\\Gravity.Manager\\Gravity.Manager.csproj": {
+              "projectPath": "X:\\Projects\\crosssample\\src\\csharp-tournament-test\\Gravity.Manager\\Gravity.Manager.csproj"
             }
           }
         }

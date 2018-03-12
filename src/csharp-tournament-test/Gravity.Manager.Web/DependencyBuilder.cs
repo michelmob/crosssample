@@ -1,11 +1,14 @@
 ﻿using System;
 using Gravity.Configuration;
 using Gravity.Diagnostics.NLog;
+using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Configuration;
 using Gravity.Manager.Data;
 using Gravity.Manager.Data.EF;
 using Gravity.Manager.Data.EF.Repositories;
-using Gravity.Manager.Data.Repositories;
+using Gravity.Manager.Domain;
+using Gravity.Manager.Domain.Audits;
+using Gravity.Manager.Domain.Organizations;
 using Gravity.Manager.Service;
 using Gravity.Manager.Service.Ldap;
 using Gravity.Manager.Web.Application;
@@ -56,17 +59,17 @@ namespace Gravity.Manager.Web
                 opts.UseMySql(svc.GetService<IConfiguration>().GetConnectionString(SettingKeys.GravityDbConnectionString)));
             
             services.AddScoped<IDiscoveryUnitOfWork, DiscoveryUnitOfWork>();
-            services.AddScoped<IDiscoveryService, DiscoveryService>();
+            services.AddScoped<IDiscoveryAppService, DiscoveryAppService>();
             
             services.AddScoped<IAuditUnitOfWork, AuditUnitOfWork>();
-            services.AddScoped<IAuditService, AuditService>();
+            services.AddScoped<IAuditAppService, AuditAppService>();
 
             // To register GravityManagerDbContext as DbContext
             services.AddScoped<DbContext, GravityManagerDbContext>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IOrganizationRepository, OrganizationRepository>();
             services.AddScoped<IMemberUnitOfWork, MemberUnitOfWork>();
-            services.AddScoped<IMemberService, MemberService>();
+            services.AddScoped<IMemberAppService, MemberAppService>();
         }
     }
 }

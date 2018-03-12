@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Gravity.Data.EF;
-using Gravity.Manager.Data.Entities;
-using Gravity.Manager.Data.Repositories;
+using Gravity.Manager.Domain.Organizations;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gravity.Manager.Data.EF.Repositories

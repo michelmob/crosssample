@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Net;
 using Gravity.Manager.Data;
+using Gravity.Manager.Domain.ValueObjects;
 
 namespace Gravity.Manager.Web.Models
 {

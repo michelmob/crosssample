@@ -1,5 +1,5 @@
 ﻿using System;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.Domain.Organizations;
 
 namespace Gravity.Manager.Web.Application
 {

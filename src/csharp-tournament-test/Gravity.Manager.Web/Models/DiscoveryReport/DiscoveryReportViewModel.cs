@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Linq;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.Domain.Dependencies;
 
 namespace Gravity.Manager.Web.Models.DiscoveryReport
 {
     public class DiscoveryReportViewModel
     {
-        public DiscoveryReportViewModel(Data.DiscoveryReport report)
+        public DiscoveryReportViewModel(Domain.ValueObjects.DiscoveryReport report)
         {
             Id = (report ?? throw new ArgumentNullException(nameof(report))).Session.Id;
             

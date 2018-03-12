@@ -1,5 +1,5 @@
 ﻿using Gravity.Manager.Data.EF.Repositories;
-using Gravity.Manager.Data.Repositories;
+using Gravity.Manager.Domain.Audits;
 
 namespace Gravity.Manager.Data.EF
 {

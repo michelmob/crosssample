@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Gravity.Manager.Data.Entities;
-using Gravity.Manager.Service;
+using Gravity.Manager.ApplicationService;
+using Gravity.Manager.Domain.Audits;
+using Gravity.Manager.Domain.Aws;
+using Gravity.Manager.Domain.Dependencies;
+using Gravity.Manager.Domain.Organizations;
 using Gravity.Runtime.Serialization;
 using Gravity.Service;
 using Microsoft.EntityFrameworkCore;
@@ -83,8 +86,8 @@ namespace Gravity.Manager.Data.EF
 
             foreach (var entry in entries)
             {
-                AuditEntry audit;
-                
+                AuditEntry audit = null;
+
                 switch (entry.State)
                 {
                     case EntityState.Deleted:
@@ -111,11 +114,16 @@ namespace Gravity.Manager.Data.EF
                 }
                 
                 // Do not create audit for audit. This should not happen.
-                Debug.Assert(!(entry.Entity is AuditEntry));
+               // Debug.Assert(!(entry.Entity is AuditEntry));
 
-                audit.EntityName = entry.Metadata.DisplayName();
-                audit.UserId = (operatingUser).Id;
-                audit.Date = dateTime;
+                if (!(entry.Entity is AuditEntry))
+                {
+                    audit.EntityName = entry.Metadata.DisplayName();
+                    audit.UserId = (operatingUser).Id;
+                    audit.Date = dateTime;
+                    //NOTE: Was not recording audit entries
+                    AuditEntries.Add(audit);
+                }
             }
         }
 

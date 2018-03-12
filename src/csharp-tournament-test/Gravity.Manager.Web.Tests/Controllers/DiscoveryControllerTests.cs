@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Gravity.Manager.Data.Entities;
+using Gravity.Manager.ApplicationService;
+using Gravity.Manager.Domain.Aws;
 using Gravity.Manager.Service;
 using Gravity.Manager.Tests.Service;
 using Gravity.Manager.Web.Controllers.API;
@@ -14,7 +15,7 @@ namespace Gravity.Manager.Web.Tests.Controllers
 {
     public class DiscoveryControllerTests
     {
-        private IDiscoveryService _service;
+        private IDiscoveryAppService _service;
         private TestLogger _logger;
         private DiscoveryController _controller;
 
