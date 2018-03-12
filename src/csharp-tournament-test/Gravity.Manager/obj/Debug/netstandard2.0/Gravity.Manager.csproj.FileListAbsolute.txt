@@ -24,9 +24,9 @@ X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\net
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.Manager.pdb
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.dll
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\bin\Debug\netstandard2.0\Gravity.pdb
+X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.csprojResolveAssemblyReference.cache
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.csproj.CoreCompileInputs.cache
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.AssemblyInfoInputs.cache
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.AssemblyInfo.cs
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.dll
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.pdb
-X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Manager\obj\Debug\netstandard2.0\Gravity.Manager.csprojResolveAssemblyReference.cache

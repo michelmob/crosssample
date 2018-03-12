@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Gravity.Manager.Data.EF.Repositories
 {
-    internal class AuditRepository : EntityRepository<AuditEntry>, IAuditRepository
+    public class AuditRepository : EntityRepository<AuditEntry>, IAuditRepository
     {
         public AuditRepository(DbContext context) : base(context)
         {

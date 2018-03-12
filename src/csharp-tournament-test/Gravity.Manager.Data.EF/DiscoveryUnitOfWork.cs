@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Gravity.Manager.Data.EF.Repositories;
 using Gravity.Manager.Domain;
 using Gravity.Manager.Domain.Audits;
 using Gravity.Manager.Domain.Aws;
-using Microsoft.EntityFrameworkCore;
 
 namespace Gravity.Manager.Data.EF
 {
@@ -33,28 +29,28 @@ namespace Gravity.Manager.Data.EF
         public IReportLineRepository ReportLines { get; }
 
 
-        //MIxing Unit of work and 
-        public async Task<AwsAccount> GetOrCreateAwsAccountAsync(string name)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentException(nameof(name));
-            }
+        ////MIxing Unit of work and 
+        //public async Task<AwsAccount> GetOrCreateAwsAccountAsync(string name)
+        //{
+        //    if (string.IsNullOrWhiteSpace(name))
+        //    {
+        //        throw new ArgumentException(nameof(name));
+        //    }
 
-            using (var tx = Context.Database.BeginTransaction())
-            {
-                if (await Context.AwsAccounts.AsQueryable().SingleOrDefaultAsync(x => x.Name == name) is AwsAccount acc)
-                {
-                    return acc;
-                }
+        //    using (var tx = Context.Database.BeginTransaction())
+        //    {
+        //        if (await Context.AwsAccounts.AsQueryable().SingleOrDefaultAsync(x => x.Name == name) is AwsAccount acc)
+        //        {
+        //            return acc;
+        //        }
 
-                var newAcc = new AwsAccount{Name = name};
+        //        var newAcc = new AwsAccount{Name = name};
                 
-                await AwsAccounts.InsertAsync(newAcc);
+        //        await AwsAccounts.InsertAsync(newAcc);
                 
-                return newAcc;
-            }
-        }
+        //        return newAcc;
+        //    }
+        //}
 
     }
 }

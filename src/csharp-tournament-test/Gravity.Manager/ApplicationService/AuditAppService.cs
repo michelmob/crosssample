@@ -15,14 +15,7 @@ namespace Gravity.Manager.ApplicationService
         {
             this.auditRepository = auditRepository ?? throw new ArgumentNullException(nameof(auditRepository));
         }
-
-        //private readonly IAuditUnitOfWork _context;
-
-        //public AuditAppService(IAuditUnitOfWork context)
-        //{
-        //    _context = context ?? throw new ArgumentNullException(nameof(context));
-        //}
-
+        
         public Task<DataPage<AuditEntry>> GetAuditPageAsync(int pageIndex, int pageSize)
         {
             //TODO: Better if we use specifications 

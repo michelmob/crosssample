@@ -1,4 +1,5 @@
 using System.Linq;
+using Gravity.Manager.Data.EF.Repositories;
 using Gravity.Manager.Domain;
 using Gravity.Manager.Domain.Audits;
 using Gravity.Manager.Domain.Aws;
@@ -13,14 +14,14 @@ namespace Gravity.Manager.Data.EF.Tests
     {
         [Test]
         public void DbContext_Insert_CreatesAudit()
-        {
+        {   
             var (audits, dm) = GetUnitsOfWork();
 
             var acc = new AwsAccount {Name = "foo"};
-
+            
             dm.AwsAccounts.Insert(acc, true);
 
-            var audit = audits.Audit.GetAll().Last();
+            var audit = audits.GetAll().Last();
             
             Assert.AreEqual(FixedDateTimeProvider.DateTime, audit.Date);
             Assert.AreEqual(DefaultUserProvider.UserId, audit.UserId);
@@ -44,7 +45,7 @@ namespace Gravity.Manager.Data.EF.Tests
             ses.RunDate = ses.RunDate.AddDays(1);
             dm.DiscoverySessions.Update(ses, true);
 
-            var audit = audits.Audit.GetAll().Last();
+            var audit = audits.GetAll().Last();
             
             Assert.AreEqual(FixedDateTimeProvider.DateTime, audit.Date);
             Assert.AreEqual(DefaultUserProvider.UserId, audit.UserId);
@@ -62,7 +63,7 @@ namespace Gravity.Manager.Data.EF.Tests
             dm.AwsAccounts.Insert(acc, true);
             dm.AwsAccounts.Delete(acc, true);
 
-            var audit = audits.Audit.GetAll().Last();
+            var audit = audits.GetAll().Last();
             
             Assert.AreEqual(FixedDateTimeProvider.DateTime, audit.Date);
             Assert.AreEqual(DefaultUserProvider.UserId, audit.UserId);
@@ -79,7 +80,7 @@ namespace Gravity.Manager.Data.EF.Tests
 
             var (auditsUow, dmUow) = GetUnitsOfWork();
             
-            var auditRepository     = auditsUow.Audit;
+            var auditRepository     = auditsUow;
             var awsAccountRepository = dmUow.AwsAccounts;
             
             for (var i = 0; i < count - 2; i++)
@@ -112,11 +113,11 @@ namespace Gravity.Manager.Data.EF.Tests
             Assert.IsFalse(page.HasNext);
         }
 
-        private static (IAuditUnitOfWork audit, IDiscoveryUnitOfWork dm) GetUnitsOfWork()
+        private static (IAuditRepository audit, IDiscoveryUnitOfWork dm) GetUnitsOfWork()
         {
             var ctx = GetTestDbContext();
 
-            return (new AuditUnitOfWork(ctx), new DiscoveryUnitOfWork(ctx));
+            return (new AuditRepository(ctx), new DiscoveryUnitOfWork(ctx));
         }
         
         public static GravityManagerDbContext GetTestDbContext()

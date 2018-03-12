@@ -1,5 +1,6 @@
 ﻿using System;
 using Gravity.Configuration;
+using Gravity.Data;
 using Gravity.Diagnostics.NLog;
 using Gravity.Manager.ApplicationService;
 using Gravity.Manager.Configuration;
@@ -60,14 +61,20 @@ namespace Gravity.Manager.Web
             
             services.AddScoped<IDiscoveryUnitOfWork, DiscoveryUnitOfWork>();
             services.AddScoped<IDiscoveryAppService, DiscoveryAppService>();
+
+            services.AddScoped<IUnitOfWork, GravityManagerUnitOfWorkBase>();
             
-            services.AddScoped<IAuditUnitOfWork, AuditUnitOfWork>();
+
+
+            //services.AddScoped<IAuditUnitOfWork, AuditUnitOfWork>();
             services.AddScoped<IAuditAppService, AuditAppService>();
 
             // To register GravityManagerDbContext as DbContext
             services.AddScoped<DbContext, GravityManagerDbContext>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IOrganizationRepository, OrganizationRepository>();
+
+            //TODO: Use only one UnitOfWork - Refactory
             services.AddScoped<IMemberUnitOfWork, MemberUnitOfWork>();
             services.AddScoped<IMemberAppService, MemberAppService>();
         }

@@ -30,4 +30,3 @@ X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.AssemblyInfo.cs
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.dll
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.pdb
-X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Diagnostics.NLog\obj\Debug\netstandard2.0\Gravity.Diagnostics.NLog.csprojResolveAssemblyReference.cache

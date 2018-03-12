@@ -24,6 +24,7 @@ namespace Gravity.Manager.Web.Controllers
         public async Task<IActionResult> Index()
         {
             var sessions = await _service.GetDiscoverySessionsWithAccountsAsync();
+
             var sessionModels = sessions.Select(x => new DiscoverySessionViewModel(x))
                 .OrderBy(x => x.RunDate).ToList();
             

@@ -25,7 +25,6 @@ X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.Storage.AmazonS3.pdb
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.dll
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\bin\Debug\netstandard2.0\Gravity.pdb
-X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.csprojResolveAssemblyReference.cache
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.csproj.CoreCompileInputs.cache
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.AssemblyInfoInputs.cache
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Storage.AmazonS3\obj\Debug\netstandard2.0\Gravity.Storage.AmazonS3.AssemblyInfo.cs
