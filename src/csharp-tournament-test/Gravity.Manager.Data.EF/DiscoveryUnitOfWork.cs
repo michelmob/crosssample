@@ -10,6 +10,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Gravity.Manager.Data.EF
 {
+    /// <summary>
+    /// Refactory
+    /// </summary>
     public sealed class DiscoveryUnitOfWork : GravityManagerUnitOfWorkBase, IDiscoveryUnitOfWork
     {
         public DiscoveryUnitOfWork(GravityManagerDbContext dbContext) : base(dbContext)
@@ -29,6 +32,8 @@ namespace Gravity.Manager.Data.EF
         public IDependencyFindingRepository DependencyFindings { get; }
         public IReportLineRepository ReportLines { get; }
 
+
+        //MIxing Unit of work and 
         public async Task<AwsAccount> GetOrCreateAwsAccountAsync(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -51,9 +56,5 @@ namespace Gravity.Manager.Data.EF
             }
         }
 
-        public Task<List<DiscoverySession>> GetDiscoverySessionsWithAccountsAsync()
-        {
-            return Context.DiscoverySessions.Include(x => x.AwsAccount).ToListAsync();
-        }
     }
 }

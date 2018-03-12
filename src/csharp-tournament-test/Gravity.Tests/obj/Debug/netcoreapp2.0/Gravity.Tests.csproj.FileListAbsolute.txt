@@ -44,4 +44,3 @@ X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Tests\obj\Debug\netco
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Tests\obj\Debug\netcoreapp2.0\Gravity.Tests.AssemblyInfo.cs
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Tests\obj\Debug\netcoreapp2.0\Gravity.Tests.dll
 X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Tests\obj\Debug\netcoreapp2.0\Gravity.Tests.pdb
-X:\Projects\crosssample\src\csharp-tournament-test\Gravity.Tests\obj\Debug\netcoreapp2.0\Gravity.Tests.csprojResolveAssemblyReference.cache

@@ -150,6 +150,7 @@ namespace Gravity.Manager.Web.Controllers
                 else
                 {
                     var user = await _memberService.GetUserByIdAsync(userState.Id);
+                    
                     user = model.ChangeUser(user);
                     // TODO: Check result
                     var result = await _memberService.UpdateUserAsync(user);

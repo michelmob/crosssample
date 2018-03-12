@@ -17,8 +17,6 @@ namespace Gravity.Manager.Domain
         IDependencyRepository Dependencies { get; }
         IDependencyFindingRepository DependencyFindings { get; }
         IReportLineRepository ReportLines { get; }
-
-        Task<AwsAccount> GetOrCreateAwsAccountAsync(string name);
-        Task<List<DiscoverySession>> GetDiscoverySessionsWithAccountsAsync();
+        
     }
 }

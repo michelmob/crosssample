@@ -22,29 +22,39 @@ namespace Gravity.Manager.ApplicationService
             _dateTimeProvider = dateTimeProvider ?? throw new ArgumentNullException(nameof(dateTimeProvider));
         }
 
-        public Task<AwsAccount> GetOrCreateAwsAccountAsync(string name)
+        public async Task<AwsAccount> GetOrCreateAwsAccountAsync(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
                 throw new ArgumentException(nameof(name));
             }
+
+            var awsAccount = (await _context.AwsAccounts.FindAllAsync(x => x.Name == name)).SingleOrDefault();
+
+            if(awsAccount!=null)
+                return awsAccount;
+
+            var newAcc = new AwsAccount { Name = name };
+
+            await _context.AwsAccounts.InsertAsync(newAcc);
+            await _context.AwsAccounts.CommitAsync();
             
-            return _context.GetOrCreateAwsAccountAsync(name);
+            return newAcc;
         }
 
-        public Task<List<AwsAccount>> GetAwsAccountsAsync()
+        public async  Task<List<AwsAccount>> GetAwsAccountsAsync()
         {
-            return _context.AwsAccounts.GetAllAsync();
+            return await _context.AwsAccounts.GetAllAsync();
         }
 
-        public Task<List<DiscoverySession>> GetDiscoverySessionsWithAccountsAsync()
+        public async Task<List<DiscoverySession>> GetDiscoverySessionsWithAccountsAsync()
         {
-            return _context.GetDiscoverySessionsWithAccountsAsync();
+            return await _context.DiscoverySessions.GetDiscoverySessionsWithAccountsAsync();
         }
 
-        public Task<List<DiscoverySession>> GetDiscoverySessionsWithAccountsAsync(long awsAccountId)
+        public async Task<List<DiscoverySession>> GetDiscoverySessionsWithAccountsAsync(long awsAccountId)
         {
-            return _context.DiscoverySessions.FindAllAsync(s => s.AwsAccountId == awsAccountId);
+            return await _context.DiscoverySessions.FindAllAsync(s => s.AwsAccountId == awsAccountId);
         }
 
         public async Task<DiscoveryReport> GetDiscoveryReportAsync(long discoverySessionId)
@@ -120,8 +130,6 @@ namespace Gravity.Manager.ApplicationService
                 throw new ArgumentException("Discovery session contains no findings.", nameof(dependencies));
             }
 
-            _context.Commit();
-
             return instances;
         }
 
@@ -171,7 +179,7 @@ namespace Gravity.Manager.ApplicationService
             }
 
             //commit 
-            _context.CommitAsync();
+             _context.Commit();
         }
 
         private static void ValidateDependency(DependencyInfo dep, string paramName)
