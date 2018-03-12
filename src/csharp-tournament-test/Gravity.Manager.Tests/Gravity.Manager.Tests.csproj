@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="NUnit" Version="3.9.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gravity.Manager.Data.EF.Tests\Gravity.Manager.Data.EF.Tests.csproj" />
+    <ProjectReference Include="..\Gravity.Manager.Data.EF\Gravity.Manager.Data.EF.csproj" />
+    <ProjectReference Include="..\Gravity.Manager\Gravity.Manager.csproj" />
+  </ItemGroup>
+</Project>

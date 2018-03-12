@@ -1,0 +1,20 @@
+﻿@using Gravity
+@model List<DiscoverySessionViewModel>
+
+@{
+    ViewData["Title"] = "Reports";
+}
+
+<h2>Discovery Sessions</h2>
+<ul>
+    @foreach (var vm in Model)
+    {
+        <li>
+            <a href="/discovery-reports/@vm.Id">
+                <span class="glyphicon glyphicon-book"> </span>
+                @vm.AwsAccountName,
+                <span class="utcToLocal">@vm.RunDate.ToUnixTimeMilliseconds()</span>
+            </a>
+        </li>
+    }
+</ul> 

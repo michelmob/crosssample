@@ -1,0 +1,64 @@
+﻿@using Gravity.Manager.Data.Entities
+@using Gravity.Manager.Web.Application
+@model UserEditViewModel
+@{
+    ViewData["Title"] = "Member";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ol class="breadcrumb">
+                    <li><a href="#">Administration</a></li>
+                    <li><a asp-controller="Members" asp-action="Index">Member Administration</a></li>
+                    <li class="active">Edit</li>
+                </ol>
+                <br/>
+                <div class="col-md-4">
+                    <form method="post" asp-controller="Members" asp-action="Edit" asp-route-id="@Model.Id">
+                        @Html.AntiForgeryToken()
+                        <div class="form-inline">
+                            <h2>
+                                <span class="glyphicon glyphicon-user"> </span> Member
+                            </h2>
+                        </div>
+                        <input type="hidden" asp-for="Id" />
+                        <input asp-for="Name" class="form-control" placeholder="Full Name"/>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        <br/>
+                        <input asp-for="EMail" class="form-control" placeholder="EMail"/>
+                        <span asp-validation-for="EMail" class="text-danger"></span>
+                        <br/>
+                        @Html.DropDownListFor(m => m.Role, @Html.GetEnumSelectList(typeof(RoleType)), "Role", new {@class = "form-control"})
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                        <br/>
+                        @Html.DropDownListFor(m => m.OrganizationId, Model.Organizations.ToSelectList(), "Organization", new {@class = "form-control"})
+                        <span asp-validation-for="OrganizationId" class="text-danger"></span>
+                        <br/>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden" id="messageRow">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="alert alert-danger" role="alert" asp-validation-summary="All">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
+        <script>
+            $("#messageRow").removeClass('hidden');
+            $("#messageRow").addClass('row');
+        </script>
+    }
+}

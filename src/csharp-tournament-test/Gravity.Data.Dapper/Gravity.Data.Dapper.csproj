@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Gravity/Gravity.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.4"/>
+    <PackageReference Include="Dapper.Contrib" Version="1.50.4"/>
+    <PackageReference Include="SlowMember" Version="1.1.0"/>
+    <PackageReference Include="System.Data.Common" Version="4.3.0"/>
+    <PackageReference Include="System.Collections" Version="4.3.0"/>
+  </ItemGroup>
+</Project>

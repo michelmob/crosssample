@@ -1,0 +1,92 @@
+﻿@using Gravity
+@using Gravity.Manager.Data.Entities
+@model Gravity.Data.DataPage<AuditEntry>
+
+@{
+    ViewData["Title"] = "Audit Trail";
+}
+
+<h2>Audit Trail</h2>
+
+<table class="table table-fixed table-striped table-hover">
+    <thead>
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            User
+        </th>
+        <th>
+            Entity
+        </th>
+        <th>
+            Old Value
+        </th>
+        <th>
+            New Value
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Data)
+    {
+        <tr>
+            <td class="utcToLocal">
+                @item.Date.ToUnixTimeMilliseconds()
+            </td>
+            <td>
+                <span class="hint" data-toggle="tooltip" title="@item.User.Name <@item.User.EMail>">
+                    @item.User.UserName
+                </span>
+            </td>
+            <td>
+                @item.EntityName
+            </td>
+            <td class="overflow-ellipsis">
+                <span class="hint" data-toggle="tooltip" title="@item.OldValue">
+                    @item.OldValue
+                </span>
+            </td>
+            <td class="overflow-ellipsis">
+                <span class="hint" data-toggle="tooltip" title="@item.NewValue">
+                    @item.NewValue
+                </span>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = Model.HasPrevious ? "" : "disabled";
+    var nextDisabled = Model.HasNext ? "" : "disabled";
+}
+
+<span>
+    <a asp-action="Index"
+       asp-route-page="0"
+       class="btn btn-xs glyphicon glyphicon-step-backward @prevDisabled"
+       style="vertical-align: baseline;"
+       data-toggle="tooltip" title="First"></a>
+
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageIndex - 1)"
+       class="btn btn-xs glyphicon glyphicon-chevron-left @prevDisabled"
+       style="vertical-align: baseline;"
+       data-toggle="tooltip" title="Previous"></a>
+
+    @(Model.PageIndex + 1) of @Model.TotalPages
+
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageIndex + 1)"
+       class="btn btn-xs glyphicon glyphicon-chevron-right @nextDisabled"
+       style="vertical-align: baseline;"
+       data-toggle="tooltip" title="Next"></a>
+
+    <a asp-action="Index"
+       asp-route-page="@(Model.TotalPages - 1)"
+       class="btn btn-xs glyphicon glyphicon-step-forward @nextDisabled"
+       style="vertical-align: baseline;"
+       data-toggle="tooltip" title="Last"></a>
+</span>

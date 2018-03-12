@@ -1,0 +1,53 @@
+﻿@model Gravity.Manager.Web.Models.LogonViewModel
+@{
+    ViewData["Title"] = "Logon";
+}
+<div class="row">
+    <div class="col-md-4"> </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @using (Html.BeginForm("Logon", "Member", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-inline">
+                        <h2>
+                            <span class="glyphicon glyphicon-user"> </span> Login Form
+                        </h2>
+                        <div class="info">
+                            <span class="glyphicon glyphicon-user"> </span> Use your AD account to login.
+                        </div>
+                    </div>
+                    @Html.TextBoxFor(m => m.UserName, new {@class = "form-control", placeholder = "Username"})
+                    <br/>
+                    @Html.PasswordFor(m => m.Password, new {@class = "form-control", placeholder = "Password"})
+                    <br/>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                }
+            </div>
+        </div>
+        <div class="hidden" id="messageRow">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="alert alert-danger" role="alert">
+                        @Html.ValidationMessage("error")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"> </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
+        <script>
+            $("#messageRow").removeClass('hidden');
+            $("#messageRow").addClass('row');
+        </script>
+    }
+}

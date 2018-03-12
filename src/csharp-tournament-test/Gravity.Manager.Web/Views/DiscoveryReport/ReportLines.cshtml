@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Gravity.Manager.Web.Models.DiscoveryReport.ReportLineViewModel>
+
+@if (Model != null)
+{
+    foreach (var line in Model)
+    {
+        <p>
+            @Html.Partial("ReportLine", line)
+        </p>
+    }
+}

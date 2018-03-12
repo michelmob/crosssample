@@ -1,0 +1,53 @@
+﻿@using Gravity.Manager.Data.Entities
+@model Gravity.Manager.Web.Models.UserProfileViewModel
+@{
+    ViewData["Title"] = "Member";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @using (Html.BeginForm("Index", "Member", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-inline">
+                        <h2>
+                            <span class="glyphicon glyphicon-user"> </span> My Profile
+                        </h2>
+                    </div>
+                    @Html.HiddenFor(m => m.Id)
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Full Name" })
+                    <br />
+                    @Html.TextBoxFor(m => m.EMail, new { @class = "form-control", placeholder = "Your EMail" })
+                    <br />
+                    @Html.Label("", "Role:")
+                    <br />
+                    @Html.LabelForModel(Enum.GetName(typeof(RoleType), Model.Role), new { @class = "form-control" } );
+                    <br />
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hidden" id="messageRow">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="alert alert-danger" role="alert">
+                @Html.ValidationMessage("error")
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
+        <script>
+            $("#messageRow").removeClass('hidden');
+            $("#messageRow").addClass('row');
+        </script>
+    }
+}

@@ -1,0 +1,30 @@
+﻿@model Gravity.Manager.Web.Models.DiscoveryReport.ReportLineViewModel
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" href="#line-@Model.Id">
+                @Model.NameAndValue
+            </a>
+        </h4>
+    </div>
+    @if (Model.Children != null)
+    {
+        <div id="line-@Model.Id" class="panel-collapse collapse">
+            <div class="panel-body">
+                @if (Model.TableHeaders != null)
+                {
+                    @Html.Partial("ReportLinesTable", Model)
+                }
+                else if (Model.IsDictionary)
+                {
+                    @Html.Partial("ReportLinesDictionary", Model.Children)
+                }
+                else
+                {
+                    @Html.Partial("ReportLines", Model.Children)
+                }
+            </div>
+        </div>
+    }
+</div>

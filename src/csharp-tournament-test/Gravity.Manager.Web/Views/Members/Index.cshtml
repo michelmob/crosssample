@@ -1,0 +1,95 @@
+﻿@using Gravity.Manager.Data.Entities
+@model Gravity.Manager.Data.Models.MemberList
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading panel-title">
+                <span class="glyphicon glyphicon-user"> </span> Member Administration
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>User Name</th>
+                    <th>EMail</th>
+                    <th>Organizations</th>
+                    <th>Role</th>
+                    <th class="right"><a class="btn btn-default btn-xs" asp-controller="Members" asp-action="Index" title="Refresh"><span class="glyphicon glyphicon-refresh"></span></a></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var user in @Model.Users)
+                {
+                    <tr>
+                        <td>@user.Name</td>
+                        <td>@user.UserName</td>
+                        <td>@user.EMail</td>
+                        @if (user.OrganizationId.HasValue)
+                        {
+                            <td>@Html.DisplayTextFor(m => m.Organizations.FirstOrDefault(o => o.Id == user.OrganizationId).Name)</td>
+                        }
+                        else
+                        {
+                            <td> </td>
+                        }
+                        <td>@(Enum.GetName(typeof(RoleType), user.Role))</td>
+                        <td class="right">
+                            <a asp-controller="Members" asp-action="Edit" asp-route-id="@user.Id" title="Edit">
+                                <span class="glyphicon glyphicon-edit"></span>
+                            </a>
+
+                            <a data-toggle="modal" data-target="#confirmDeleteModal" href="#" data-id="@user.Id" data-label="@user.UserName" title="Delete">
+                                <span class="glyphicon glyphicon-trash danger"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" id="confirmDeleteForm" asp-controller="Members" asp-action="Delete">
+                @Html.AntiForgeryToken()
+                <input type="hidden" id="id" name="id" />
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title danger" id="confirmModalLabel"><span class="glyphicon glyphicon-question-sign"></span> Confirm</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Are you really want to delete <span id="label">###</span> user?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $('#confirmDeleteModal').on('show.bs.modal',
+            function(event) {
+                var button = $(event.relatedTarget);
+                var id = button.data('id');
+                var label = button.data('label');
+
+                var modal = $(this);
+                $('#id').val(id);
+                $('#label').html(label);
+            })
+    </script>
+}

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gravity.Manager\Gravity.Manager.csproj">
+      <Project>{1F30BD27-18EB-4617-9D86-8F516417E1BB}</Project>
+      <Name>Gravity.Manager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.0.0" />
+    <PackageReference Include="Novell.Directory.Ldap.NETStandard2_0" Version="3.1.0" />
+  </ItemGroup>
+</Project>
